@@ -1,3 +1,5 @@
+@Author Jazeb Raja
+
 public class Room {
     private String roomNum;
     private boolean avEquip;
