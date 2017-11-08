@@ -1,0 +1,59 @@
+//User class
+public class User {
+    protected String UserName;
+    
+    public User(String name){
+        UserName = name;
+    }
+    
+    public String getUserName(){
+        return UserName;
+    }
+}
+
+//GuestUser class
+public class GuestUser extends User{
+    protected String GuestUserName;
+    
+    public GuestUser(String name){
+        GuestUserName = name;
+    }
+}
+
+//Registered user class
+public class RegisteredUser extends User{
+    protected String bannerID;
+    protected boolean isAdmin;
+    
+    public RegisteredUser(String name, String BannerID){
+        UserName = name;
+        bannerID = BannerID;
+        
+    }
+    public String getID(){
+        return bannerID;
+    }
+    public void setIsAdmin(boolean admin){
+        admin = false;
+        isAdmin = admin;
+    }
+    
+}
+//Admin user class
+public class AdminUser extends RegisteredUser{
+    protected String bannerID;
+    protected boolean isAdmin;
+    
+    public AdminUser(String name, String ID){
+        UserName = name;
+        bannerID = ID;
+    }
+    
+    public String getID(){
+        return UserName;
+    }
+    public void setIsAdmin(boolean admin){
+        admin = true;
+        isAdmin = admin;
+    }
+}
