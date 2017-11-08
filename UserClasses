@@ -1,3 +1,5 @@
+@Author Aaron Bloomfield
+
 //User class
 public class User {
     protected String UserName;
