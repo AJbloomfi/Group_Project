@@ -6,7 +6,7 @@
 package umw_room_scheduler;
 
 /**
- *
+ * Lalalalala
  * @Author Aaron Bloomfield
  */
 //GuestUser class
