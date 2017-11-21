@@ -8,6 +8,10 @@ public class Room {
     private boolean avEquip;
     private String roomBuilding;
     
+    
+    public Room(){
+    
+    }
     public Room(String num, String build, boolean av){
         roomNum = num;
         avEquip = av;

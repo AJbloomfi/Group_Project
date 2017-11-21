@@ -8,6 +8,11 @@ package umw_room_scheduler;
 public class User {
     protected String UserName;
     
+    public User(){
+    
+    
+    }
+    
     public User(String name){
         UserName = name;
     }
