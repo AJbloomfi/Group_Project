@@ -10,11 +10,10 @@ package umw_room_scheduler;
  * @Author Aaron Bloomfield
  */
 public class AdminUser extends RegisteredUser{
-    protected String bannerID;
     protected boolean isAdmin;
     
-    public AdminUser(String name, String ID){
-       super(name, ID);
+    public AdminUser(String name){
+       super(name);
     }
     
     public String getID(){
