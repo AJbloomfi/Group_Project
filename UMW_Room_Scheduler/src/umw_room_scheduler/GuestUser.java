@@ -20,18 +20,18 @@ public class GuestUser extends User{
     
     public GuestUser(){
     }
-    public void BecomeUser(){
+    public void BecomeUser()throws IOException{
         PrintWriter fw = null;
-        try{
             fw = new PrintWriter("registeredusers.txt");
             BufferedWriter bw = new BufferedWriter(fw);
-            System.out.println("What would you like you UserName to be?");
+            System.out.println("What would you like your UserName to be?");
             Scanner input = new Scanner(System.in);
             String username = input.next();
-            bw.write(username);
+            fw.;
+            fw.println(username + " " + "false");
             fw.close();
-        } catch(IOException e){
-            e.printStackTrace();
-        }
+//            catch(IOException e){
+//            e.printStackTrace();
+//        }
     }
 }

@@ -58,7 +58,7 @@ public class UMW_Room_Scheduler extends Application{
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ArrayList<RegisteredUser>registerArray = null;
         ArrayList<Room>roomArray = null;
         ArrayList<Reservation>reservationArray = null;
@@ -76,7 +76,7 @@ public class UMW_Room_Scheduler extends Application{
                 System.out.println(Arrays.toString(sValues));
                 Reservation reservationList = new Reservation(sValues[0],sValues[1],Boolean.parseBoolean(sValues[2]), sValues[3], Integer.parseInt(sValues[4]));
                 reservationArray.add(reservationList);
-                launch(args);
+                
             }
           
         }
@@ -85,6 +85,9 @@ public class UMW_Room_Scheduler extends Application{
         }
         GuestUser Guest = new GuestUser();
         Guest.BecomeUser();
+        AdminUser Admin = new AdminUser("Jazeb", true);
+        Admin.RemoveUser();
+        launch(args);
     }
     
 }

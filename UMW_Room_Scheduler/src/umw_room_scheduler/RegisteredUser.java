@@ -10,21 +10,27 @@ package umw_room_scheduler;
  * @Author Aaron Bloomfield
  */
 public class RegisteredUser extends User{
-    protected boolean isAdmin;
     
     /**
      *
      * @param name
      * @param BannerID
      */
-    public RegisteredUser(String name){
-        super(name);
-//        UserName = name;
+    public RegisteredUser(String name, boolean admin){
+        this.UserName = name;
+        isAdmin = admin;
 //        
     }
-    public void setIsAdmin(boolean admin){
-        admin = false;
+    public void AdminUser(String name, boolean admin){
+        this.UserName = name;
         isAdmin = admin;
+        admin = false;
     }
-    
+    public String getID(){
+        return UserName;
+    }
+    public boolean getAdmin(){
+        return isAdmin;
+    }
 }
+    
