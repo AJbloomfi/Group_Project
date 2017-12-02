@@ -1,6 +1,8 @@
 
 package umw_room_scheduler;
 
+import java.io.File;
+import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -14,7 +16,6 @@ import javafx.stage.Stage;
  * @author Joe Cheeks
  */
 public class UMW_Room_Scheduler extends Application {
-    
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
@@ -42,6 +43,11 @@ public class UMW_Room_Scheduler extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        ArrayList<RegisteredUser>registerArray = null;
+        ArrayList<Room>roomArray = null;
+        ArrayList<Reservation>reserveArray;
+        File file = new File("reservation.txt");
+        
     }
     
 }
