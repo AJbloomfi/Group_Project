@@ -58,6 +58,7 @@ public class UMW_Room_Scheduler extends Application{
                 String line = read.nextLine();
                 String regExp = "\\s*(\\s|,)\\s*";
                 String[] sValues = line.split(regExp);
+                
                 Reservation reservationList = new Reservation(sValues[0],sValues[1],Boolean.parseBoolean(sValues[2]), sValues[3], Integer.parseInt(sValues[4]));
                 reservationArray.add(reservationList);
             }
@@ -66,7 +67,8 @@ public class UMW_Room_Scheduler extends Application{
         catch(IOException e){
             System.err.println("Caught IOException:" + e.getMessage());
         }
-        System.out.println(reservationArray);
+       // System.out.println(reservationArray);
+        launch(args);
     }
     
 }
