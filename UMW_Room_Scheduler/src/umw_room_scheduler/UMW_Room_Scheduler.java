@@ -4,6 +4,7 @@ package umw_room_scheduler;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -17,9 +18,10 @@ import javafx.stage.Stage;
  *
  * @author Joe Cheeks
  */
-public class UMW_Room_Scheduler extends Application {
-    @Override
-    public void start(Stage primaryStage) {
+public class UMW_Room_Scheduler extends Application{
+    
+   @Override
+   public void start(Stage primaryStage) {
         Button btn = new Button();
         btn.setText("Start");
         btn.setOnAction(new EventHandler<ActionEvent>() {
@@ -47,7 +49,8 @@ public class UMW_Room_Scheduler extends Application {
         ArrayList<RegisteredUser>registerArray = null;
         ArrayList<Room>roomArray = null;
         ArrayList<Reservation>reservationArray = null;
-        File file = new File("reservation.txt");
+        String fileName = "reservation.txt";
+        File file = new File(fileName);
         try{
             registerArray = new ArrayList<>();
             roomArray = new ArrayList<>();
@@ -57,6 +60,7 @@ public class UMW_Room_Scheduler extends Application {
                 String line = read.nextLine();
                 String regExp = "\\s*(\\s|,)\\s*";
                 String[] sValues = line.split(regExp);
+                System.out.println(Arrays.toString(sValues));
                 Reservation reservationList = new Reservation(sValues[0],sValues[1],Boolean.parseBoolean(sValues[2]), sValues[3], Integer.parseInt(sValues[4]));
                 reservationArray.add(reservationList);
             }
@@ -65,7 +69,7 @@ public class UMW_Room_Scheduler extends Application {
         catch(IOException e){
             System.err.println("Caught IOException:" + e.getMessage());
         }
-        System.out.println(reservationArray);
+        launch(args);
     }
     
 }
