@@ -6,7 +6,7 @@
 package umw_room_scheduler;
 
 /**
- * Lalalalala
+ * 
  * @Author Aaron Bloomfield
  */
 //GuestUser class
@@ -15,5 +15,8 @@ public class GuestUser extends User{
     
     public GuestUser(String name){
         super (name);
+    }
+    public void BecomeUser(String name, String BannerID){
+        
     }
 }
