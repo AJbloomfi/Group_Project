@@ -10,16 +10,20 @@ package umw_room_scheduler;
  * @author Joe
  */
 public class Reservation {
+    protected String UserName;
+    private String roomNum;
+    private boolean avEquip;
+    private String roomBuilding;
+    int date;
 
-User name;
-Room r;
     
-public void reservation(User name, Room r){
-this.name = name;
-this.r = r;
-
-
-
-}
-    
+    public Reservation( String name, String number, boolean equip, String building, int d){
+        name = UserName;
+        number = roomNum;
+        equip = avEquip;
+        building = roomBuilding;
+        d = date;
+    }
+        
+      
 }
