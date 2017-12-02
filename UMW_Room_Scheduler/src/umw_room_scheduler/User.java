@@ -19,8 +19,11 @@ public class User {
         isAdmin = admin;
     }
     
-    public String getUserName(){
+public String getID(){
         return UserName;
+    }
+    public boolean getAdmin(){
+        return isAdmin;
     }
 }
 

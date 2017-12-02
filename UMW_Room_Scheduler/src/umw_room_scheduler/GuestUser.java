@@ -27,6 +27,7 @@ public class GuestUser extends User{
             System.out.println("What would you like your UserName to be?");
             Scanner input = new Scanner(System.in);
             String username = input.next();
+            fw.;
             fw.println(username + " " + "false");
             fw.close();
 //            catch(IOException e){

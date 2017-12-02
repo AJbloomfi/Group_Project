@@ -26,5 +26,11 @@ public class RegisteredUser extends User{
         isAdmin = admin;
         admin = false;
     }
+    public String getID(){
+        return UserName;
+    }
+    public boolean getAdmin(){
+        return isAdmin;
+    }
 }
     
