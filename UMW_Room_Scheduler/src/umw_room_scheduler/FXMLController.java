@@ -7,6 +7,7 @@ package umw_room_scheduler;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 
 /**
@@ -18,7 +19,16 @@ public class FXMLController implements Initializable {
 
     /**
      * Initializes the controller class.
+     *  
+     * @param event
      */
+    public void handleLoginAction(ActionEvent event){
+    
+    //if(TextField.equals(registeredArray)){
+    //dosomething
+    //}
+    
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

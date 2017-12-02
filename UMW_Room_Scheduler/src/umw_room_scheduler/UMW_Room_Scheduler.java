@@ -17,10 +17,10 @@ import javafx.stage.Stage;
  *
  * @author Joe Cheeks
  */
-public class UMW_Room_Scheduler /*extends Application */{
+public class UMW_Room_Scheduler extends Application{
     
-    //@Override
-    /*public void start(Stage primaryStage) {
+   @Override
+   public void start(Stage primaryStage) {
         Button btn = new Button();
         btn.setText("Start");
         btn.setOnAction(new EventHandler<ActionEvent>() {
@@ -40,7 +40,7 @@ public class UMW_Room_Scheduler /*extends Application */{
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-8/
+
     /**
      * @param args the command line arguments
      */
