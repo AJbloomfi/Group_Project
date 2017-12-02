@@ -6,9 +6,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
@@ -21,24 +26,32 @@ import javafx.stage.Stage;
 public class UMW_Room_Scheduler extends Application{
     
    @Override
-   public void start(Stage primaryStage) {
+   public void start(Stage primaryStage) throws IOException {
         Button btn = new Button();
         btn.setText("Start");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
-                //System.out.println("Hello World!");
             }
         });
-        
+         try {
+                    Parent StartParent = FXMLLoader.load(getClass().getResource("FXMLlogin.fxml"));
+                    Scene StartScene = new Scene(StartParent);
+                   
+                } catch (IOException ex) {
+                    Logger.getLogger(UMW_Room_Scheduler.class.getName()).log(Level.SEVERE, null, ex);
+                }
         StackPane root = new StackPane();
         root.getChildren().add(btn);
         
         Scene scene = new Scene(root, 600, 800);
+       Parent StartParent = FXMLLoader.load(getClass().getResource("FXMLlogin.fxml"));
+        
+         Scene scene1 = new Scene(StartParent);
         
         primaryStage.setTitle("UMW Room Scheduler");
-        primaryStage.setScene(scene);
+        primaryStage.setScene(scene1);
         primaryStage.show();
     }
 
@@ -63,14 +76,15 @@ public class UMW_Room_Scheduler extends Application{
                 System.out.println(Arrays.toString(sValues));
                 Reservation reservationList = new Reservation(sValues[0],sValues[1],Boolean.parseBoolean(sValues[2]), sValues[3], Integer.parseInt(sValues[4]));
                 reservationArray.add(reservationList);
+                launch(args);
             }
           
         }
         catch(IOException e){
             System.err.println("Caught IOException:" + e.getMessage());
         }
-       // System.out.println(reservationArray);
-        launch(args);
+        GuestUser Guest = new GuestUser();
+        Guest.BecomeUser();
     }
     
 }
