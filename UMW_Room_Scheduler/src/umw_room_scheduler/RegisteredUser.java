@@ -10,7 +10,6 @@ package umw_room_scheduler;
  * @Author Aaron Bloomfield
  */
 public class RegisteredUser extends User{
-    protected String bannerID;
     protected boolean isAdmin;
     
     /**
@@ -18,14 +17,10 @@ public class RegisteredUser extends User{
      * @param name
      * @param BannerID
      */
-    public RegisteredUser(String name, String BannerID){
+    public RegisteredUser(String name){
         super(name);
 //        UserName = name;
-        bannerID = BannerID;
 //        
-    }
-    public String getID(){
-        return bannerID;
     }
     public void setIsAdmin(boolean admin){
         admin = false;
