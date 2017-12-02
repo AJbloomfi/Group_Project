@@ -63,7 +63,7 @@ public class UMW_Room_Scheduler extends Application{
                 System.out.println(Arrays.toString(sValues));
                 Reservation reservationList = new Reservation(sValues[0],sValues[1],Boolean.parseBoolean(sValues[2]), sValues[3], Integer.parseInt(sValues[4]));
                 reservationArray.add(reservationList);
-                launch(args);
+                
             }
           
         }
@@ -72,6 +72,7 @@ public class UMW_Room_Scheduler extends Application{
         }
         GuestUser Guest = new GuestUser();
         Guest.BecomeUser();
+        launch(args);
     }
     
 }
