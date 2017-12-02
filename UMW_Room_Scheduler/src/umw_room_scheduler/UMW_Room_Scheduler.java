@@ -45,7 +45,7 @@ public class UMW_Room_Scheduler extends Application{
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ArrayList<RegisteredUser>registerArray = null;
         ArrayList<Room>roomArray = null;
         ArrayList<Reservation>reservationArray = null;
