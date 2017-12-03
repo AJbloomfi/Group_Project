@@ -65,7 +65,7 @@ public class UMW_Room_Scheduler extends Application{
         String fileName = "reservation.txt";
         File file = new File(fileName);
         try{
-            registerArray = new ArrayList<>();
+            
             roomArray = new ArrayList<>();
             reservationArray = new ArrayList<>();
             Scanner read = new Scanner(file);
