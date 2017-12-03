@@ -7,13 +7,23 @@ package umw_room_scheduler;
 //User class
 public class User {
     protected String UserName;
+    public boolean isAdmin;
     
-    public User(String name){
-        UserName = name;
+    public User(){
+    
+    
     }
     
-    public String getUserName(){
+    public User(String name, boolean admin){
+        UserName = name;
+        isAdmin = admin;
+    }
+    
+public String getID(){
         return UserName;
+    }
+    public boolean getAdmin(){
+        return isAdmin;
     }
 }
 
