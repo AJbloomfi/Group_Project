@@ -83,10 +83,11 @@ public class UMW_Room_Scheduler extends Application{
         catch(IOException e){
             System.err.println("Caught IOException:" + e.getMessage());
         }
-        GuestUser Guest = new GuestUser();
+       /* GuestUser Guest = new GuestUser();
         Guest.BecomeUser();
         AdminUser Admin = new AdminUser("Jazeb", true);
         Admin.RemoveUser();
+*/
         launch(args);
     }
     
