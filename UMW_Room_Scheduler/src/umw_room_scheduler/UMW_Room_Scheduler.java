@@ -56,6 +56,7 @@ public class UMW_Room_Scheduler extends Application{
     }
 
     /**
+     * main argument 
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
