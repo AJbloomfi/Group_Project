@@ -5,25 +5,47 @@
  */
 package umw_room_scheduler;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.Scanner;
+
 /**
  *
  * @author Joe
  */
 public class Reservation {
-    protected String UserName;
-    private String roomNum;
-    private boolean avEquip;
-    private String roomBuilding;
-    int date;
+    protected String UserName;   
+    private Room roomBuilding;
+    LocalDate date;
+    int time;
 
     
-    public Reservation( String name, String number, boolean equip, String building, int d){
+    public Reservation( String name,Room build, LocalDate d, int t){
         name = UserName;
-        number = roomNum;
-        equip = avEquip;
-        building = roomBuilding;
+        build = roomBuilding;
         d = date;
+        t = time;
     }
-        
+    public String getName(){
+        return UserName;
+    }
+    public Room getBuild(){
+        return roomBuilding;
+    }
+    public LocalDate getDate(){
+        return date;
+    }
+    public int getTime(){
+        return time;
+    }
       
 }

@@ -69,10 +69,8 @@ public class AdminUser extends User{
                         String Newname = registerArray.get(x).getID();
                         boolean newAdmin = registerArray.get(x).getAdmin();
                         out.println(Newname +" "+newAdmin);
-                    
                     }
-                    
-  
+
                 }
                 catch(IOException e){
                     
