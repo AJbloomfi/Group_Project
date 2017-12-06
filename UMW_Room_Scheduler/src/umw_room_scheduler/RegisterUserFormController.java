@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 /**
@@ -25,18 +26,23 @@ public class RegisterUserFormController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    @FXML TextField userNameEntered;
+  @FXML TextField userNameEntered;
+    
     /*Creates a new registered user*/
     public void registerUserAction(ActionEvent event) throws FileNotFoundException{
         PrintWriter fw = null;
             fw = new PrintWriter("registeredusers.txt");
             BufferedWriter bw = new BufferedWriter(fw);
-   
+            RegisteredUser reg1 = new RegisteredUser(userNameEntered.getText(),false);
+            fw.println(reg1.toString());
+            fw.close();
     
     }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+         
     }    
     
 }

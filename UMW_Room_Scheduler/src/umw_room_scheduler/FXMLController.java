@@ -30,13 +30,8 @@ public class FXMLController implements Initializable {
      *  
      * @param event
      */
-    @FXML TextField username;
-    public void handleLoginAction(ActionEvent event){
-   
-   
-    
-    
-    }
+
+
     public void RegisterAction(ActionEvent event) throws IOException{
     Parent registerFormParent = FXMLLoader.load(getClass().getResource("registerUserForm.fxml"));
     Scene registerScene = new Scene(registerFormParent);
