@@ -18,9 +18,15 @@ import java.util.Scanner;
 //GuestUser class
 public class GuestUser extends User{
     
-    
+    /**
+     * Default constructor to initialize the guest user class.
+     */
     public GuestUser(){
     }
+    /**
+     * Method that imports a text file and then allows a guest user to register.
+     * @throws IOException 
+     */
     public void BecomeUser()throws IOException{
         try(FileWriter fw = new FileWriter("registeredusers.txt",true);
                 BufferedWriter bw = new BufferedWriter(fw);

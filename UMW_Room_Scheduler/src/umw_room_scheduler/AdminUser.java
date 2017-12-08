@@ -18,24 +18,41 @@ import javafx.beans.property.SimpleStringProperty;
 /**
  *
  * @Author Aaron Bloomfield
+ * This class creates an Administrative user
  */
 public class AdminUser extends User{
 //    protected boolean isAdmin;
 //    protected String name;
-    
+    /**
+     * The default constructor for creating an administrative user.
+     * @param name
+     * @param admin 
+     */
     public AdminUser(String name, boolean admin){
         this.UserName = new SimpleStringProperty(name);
         isAdmin = admin;
         admin = true;
     }
-    
+    /**
+     * Method to return the User name.
+     * @return 
+     */
     @Override
     public String getID(){
         return UserName.get();
     }
+    /**
+     * Method to return whether or not the admin is an admin.
+     * @return 
+     */
     public boolean getAdmin(){
         return isAdmin;
     }
+    /**
+     * Method that imports a a text file containing all registered users and then creates a loop that allows 
+     * an administrative user to remove a registered user.
+     * @throws IOException 
+     */
     public void RemoveUser() throws IOException{
         ArrayList<RegisteredUser>registerArray = null;
         registerArray = new ArrayList<>();

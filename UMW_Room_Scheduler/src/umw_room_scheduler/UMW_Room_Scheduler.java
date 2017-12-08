@@ -26,11 +26,15 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
- *
+ *The main class encapsulates data stored in multiple text files and imports those files.
  * @author Joe Cheeks
  */
 public class UMW_Room_Scheduler extends Application{
-    
+    /**
+     * The start method initializes the project.
+     * @param primaryStage
+     * @throws IOException 
+     */
    @Override
    public void start(Stage primaryStage) throws IOException {
         Button btn = new Button();
