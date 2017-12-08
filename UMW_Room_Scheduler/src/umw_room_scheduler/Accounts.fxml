@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umw_room_scheduler.AccountsController">
+   <children>
+      <TableView fx:id="TableView" layoutX="165.0" layoutY="26.0" prefHeight="349.0" prefWidth="271.0">
+        <columns>
+          <TableColumn fx:id="userColumn" prefWidth="136.0" text="Username" />
+          <TableColumn fx:id="isAdminColumn" prefWidth="133.0" text="Admin" />
+        </columns>
+      </TableView>
+      <Button layoutX="506.0" layoutY="324.0" mnemonicParsing="false" onAction="#BackAction2" text="Back" />
+   </children>
+</AnchorPane>

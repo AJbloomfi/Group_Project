@@ -8,17 +8,17 @@
 
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umw_room_scheduler.RegisterUserFormController">
    <children>
-      <AnchorPane layoutX="105.0" layoutY="58.0" prefHeight="328.0" prefWidth="371.0">
+      <AnchorPane layoutX="71.0" layoutY="28.0" prefHeight="358.0" prefWidth="437.0">
          <children>
-            <TextField fx:id="userNameEntered" layoutX="7.0" layoutY="126.0" prefHeight="27.0" prefWidth="358.0" promptText="Choose Username" />
-            <Button layoutX="151.0" layoutY="186.0" mnemonicParsing="false" onAction="#registerUserAction" text="Register" />
-            <Label layoutX="113.0" layoutY="14.0" text="Become A User!">
+            <TextField fx:id="userNameEntered" layoutX="35.0" layoutY="126.0" prefHeight="27.0" prefWidth="371.0" promptText="Choose Username" />
+            <Button layoutX="184.0" layoutY="188.0" mnemonicParsing="false" onAction="#registerUserAction" text="Register" />
+            <Label layoutX="148.0" layoutY="56.0" text="Become A User!">
                <font>
                   <Font size="19.0" />
                </font>
             </Label>
             <Label layoutX="169.0" layoutY="232.0" />
-            <Label layoutX="169.0" layoutY="241.0" text="Label" />
+            <Label layoutX="202.0" layoutY="241.0" text="Label" />
          </children>
       </AnchorPane>
    </children>

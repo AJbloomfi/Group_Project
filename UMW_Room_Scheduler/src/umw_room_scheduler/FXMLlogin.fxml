@@ -3,6 +3,7 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
@@ -37,14 +38,14 @@
           </Menu>
         </menus>
       </MenuBar>
-      <HBox layoutX="282.0" layoutY="40.0" prefHeight="166.0" prefWidth="301.0">
+      <HBox layoutX="282.0" layoutY="57.0" prefHeight="149.0" prefWidth="301.0">
          <children>
-            <TextField>
+            <TextField fx:id="loginTextField">
                <HBox.margin>
                   <Insets left="20.0" top="110.0" />
                </HBox.margin>
             </TextField>
-            <Button mnemonicParsing="false" text="login">
+            <Button mnemonicParsing="false" onAction="#LoginAction" text="login">
                <HBox.margin>
                   <Insets left="20.0" top="110.0" />
                </HBox.margin>
@@ -53,7 +54,7 @@
       </HBox>
       <HBox layoutX="37.0" layoutY="156.0" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" text="GUEST">
+            <Button mnemonicParsing="false" onAction="#viewAsGuest" text="GUEST">
                <HBox.margin>
                   <Insets left="70.0" right="50.0" top="30.0" />
                </HBox.margin>
@@ -68,5 +69,6 @@
             <Button layoutX="90.0" layoutY="54.0" mnemonicParsing="false" onAction="#RegisterAction" text="REGISTER" />
          </children>
       </AnchorPane>
+      <Label fx:id="errMessage" layoutX="403.0" layoutY="334.0" text="Label" />
    </children>
 </AnchorPane>

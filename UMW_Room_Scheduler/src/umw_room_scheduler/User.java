@@ -1,12 +1,14 @@
 package umw_room_scheduler;
 
+import javafx.beans.property.SimpleStringProperty;
+
 
 /**
  * @Author Aaron Bloomfield
  */
 //User class
 public class User {
-    protected String UserName;
+    protected SimpleStringProperty UserName;
     public boolean isAdmin;
     
     public User(){
@@ -15,12 +17,12 @@ public class User {
     }
     
     public User(String name, boolean admin){
-        UserName = name;
+        this.UserName = new SimpleStringProperty(name);
         isAdmin = admin;
     }
     
 public String getID(){
-        return UserName;
+        return UserName.get();
     }
     public boolean getAdmin(){
         return isAdmin;
